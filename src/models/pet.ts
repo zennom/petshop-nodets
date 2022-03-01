@@ -1,5 +1,7 @@
+type PetType = 'dog' | 'cat' | 'fish'
+
 type Pet = {
-    type: 'dog' | 'cat' | 'fish',
+    type: PetType,
     image: string,
     name: string,
     color: string,
@@ -127,9 +129,32 @@ const data: Pet[] =
         sex: 'Masculino'
     },
 ]
+
 export const Pet = {
+    //1 buscar todos os pets
     getAll: () =>{
         return data
+    },
+    //2 buscar os pets por tipo
+    getFromType: (type: PetType): Pet[] =>{
+
+        return data.filter(item =>{
+            if(item.type == type){
+                return true
+            }else{
+                return false
+            }
+        })
+    },
+    //3 buscar o tipo de pet pelo nome
+    getFromName: (name: string): Pet[] =>{
+        return data.filter(item => {
+            if(item.name.toLowerCase().indexOf(name.toLowerCase()) > -1){
+                return true
+            } else {
+                return false
+            }
+        })
     }
 }
 
