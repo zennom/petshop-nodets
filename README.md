@@ -1,5 +1,5 @@
 # petshop-nodets
-Projeto feito em nodejs com a turma de Desenvolvimento de Sistemas
+Projeto PetShop feito em NodeJS
 
 ### Pré-requisitos globais:
 `npm i -g nodemon typescript ts-node`
