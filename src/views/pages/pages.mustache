@@ -1,5 +1,4 @@
 {{>partials/header}}
-
 {{#banner}}
 <section class="banner" style="background-image: url('images/{{background}}')">{{title}}</section>
 <h2>{{title}} disponíveis para adoção</h2>
@@ -9,10 +8,15 @@
     <div class="item">
         <img src="images/{{image}}" class="item--image" />
         <div class="item--name">{{ name }}</div>
-        <div class="item--color">Cor:{{ color }}o</div>
+        <div class="item--color">Cor:{{ color }}</div>
         <div class="item--genre">Gênero: {{ sex }}</div>
     </div>
     {{/list}}
 <div>
 
-{{>partials/footer}}
+{{^list}}
+    <div class="container no-list">
+        <h2>Não existem animais disponíveis com esse nome</h2>
+    </div>
+{{/list}}
+

@@ -1,4 +1,4 @@
-type PetType = 'dog' | 'cat' | 'fish'
+type PetType = 'dog' | 'cat' | 'fish' | 'bird'
 
 type Pet = {
     type: PetType,
@@ -94,6 +94,55 @@ const data: Pet[] =
         sex: 'Masculino'
     },
     {
+        type: 'bird',
+        image: 'arara-azul.jpg',
+        name: 'Arara Azul',
+        color:'Azul e Amarelo',
+        sex: 'Feminino'
+    },
+    {
+        type: 'bird',
+        image: 'arara-caninde.jpg',
+        name: 'Arara Canindé',
+        color: 'Azul e Amarelo',
+        sex: 'Feminino'
+    },
+    {
+        type: 'bird',
+        image: 'pato-mandarim.jpg',
+        name: 'Pato Mandarim',
+        color: 'Marrom e Preto',
+        sex: 'Masculino'
+    },
+    {
+        type: 'bird',
+        image: 'ringneck.jpg',
+        name: 'Periquito de Colar',
+        color: 'Verde',
+        sex: 'Masculino'
+    },
+    {
+        type: 'bird',
+        image: 'tucano.jpg',
+        name: 'Tucano de Bico Preto',
+        color: 'Preto e Amarelo',
+        sex: 'Feminino'
+    },
+    {
+        type: 'bird',
+        image: 'cacatua-rosa.jpg',
+        name: 'Cacatua Rosa',
+        color: 'Rosa e Branco',
+        sex: 'Masculino'
+    },
+    {
+        type: 'bird',
+        image: 'calopsita.jpg',
+        name: 'Calopsita',
+        color: 'Branco e Amarelo',
+        sex: 'Masculino'
+    },
+    {
         type: 'fish',
         image: 'neon.jpg',
         name: 'Tetra Neon',
@@ -131,11 +180,9 @@ const data: Pet[] =
 ]
 
 export const Pet = {
-    //1 buscar todos os pets
     getAll: () =>{
         return data
     },
-    //2 buscar os pets por tipo
     getFromType: (type: PetType): Pet[] =>{
 
         return data.filter(item =>{
@@ -146,7 +193,6 @@ export const Pet = {
             }
         })
     },
-    //3 buscar o tipo de pet pelo nome
     getFromName: (name: string): Pet[] =>{
         return data.filter(item => {
             if(item.name.toLowerCase().indexOf(name.toLowerCase()) > -1){
