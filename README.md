@@ -1,4 +1,4 @@
-# PetShop em NodeJS
+## PetShop em NodeJS
 Projeto PetShop feito em NodeJS
 
 ### Pré-requisitos globais:
